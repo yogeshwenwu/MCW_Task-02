@@ -32,7 +32,7 @@ int main() {
 
     // Vector transpose the matrix
     auto start_vector = chrono::high_resolution_clock::now();
-    MatrixTranspose(matrix);
+    MtAvx128(matrix);
     auto end_vector = chrono::high_resolution_clock::now();
     auto vector_duration = chrono::duration_cast<chrono::nanoseconds>(end_vector - start_vector).count();
     
